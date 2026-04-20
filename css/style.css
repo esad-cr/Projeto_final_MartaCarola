@@ -79,3 +79,63 @@ iframe, video {
   height: 100%;
   width: 100%
 }
+
+/*************************************************
+
+começa o meu codigo
+
+
+**************************************************/
+
+body {
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+}
+/*** tipogtafia para mobile*************/
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+}
+
+h1{
+    font-size: 2.986rem;
+    font-weight: 900;
+    letter-spacing: 0.22rem;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2.488rem;
+    font-weight: 700;
+    letter-spacing: 0.22rem;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 2.074rem;
+    font-weight: 500;
+    letter-spacing: 0.22rem;
+    line-height: 1.15; 
+}
+
+
+/*********************************************************
+***********************************************************
+******        Tipografia para descktop    *****************
+*************************************************/
+
+@media (min-width: 992px) {
+
+    h1{
+        font-size: 5,61rem;
+    }
+    
+    h2{
+        font-size: 4,209rem;
+    }
+
+    h3{
+        font-size: 3,157rem;
+    }
+}
