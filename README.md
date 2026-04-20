@@ -34,12 +34,6 @@ As páginas `index.html`, `sobre-mim.html`, `projetos.html` e `contactos.html` s
 - **contactos.html** → Contactos do autor  
 - **processing.html** → Projetos desenvolvidos em Processing (com canvas)
 
-## Subpaginas de projetos do Website
-
-- **projetos_Fotografia.html** → Apresentação dos trabalhos de fotografia
-- **projetos_Video.html** → Apresentação dos trabalhos de VÍdeo
-- **projetos_UX/UI.html** → Apresentação dos trabalhos de UX/UI
-## Estrutura do Projeto
 ![Estrutura](img/readme/estrutura.jpg)
 ## Autor
 - Marta Carola
