@@ -85,7 +85,7 @@ começa o meu codigo
 **************************************************/
 
 :root{
-  --header-height: 3.5rem;
+  --header-height: 4.5rem;
 
   --background-color: rgb(13, 13, 13);
   --primary-color: rgb(255, 110, 180);
@@ -118,7 +118,8 @@ começa o meu codigo
 body {
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
-    color: var(--secondary-body-color)
+    color: var(--secondary-body-color);
+    background-color: var(--background-color)
 
 
 }
@@ -245,7 +246,7 @@ a:hover, a:active, a.active {
 }
 
 #headerLogo img {
-  width: 3.5rem;
+  width: 4rem;
 }
 
 .nav__toggle {
@@ -268,4 +269,37 @@ a:hover, a:active, a.active {
 
 .nav__close {
   opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 992px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 4.5rem; /*afastamento do top*/
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+  .nav__list {
+    background-color: var(--background-color);
+    padding-top: 1rem;
+  }
+
+  .nav__link {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  font-weight: var(--font-regulr);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
 }
