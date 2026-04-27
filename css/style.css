@@ -98,7 +98,7 @@ começa o meu codigo
   --font-semi-bold: 600;
   --font-bold: 800;
 
-  /
+  
   --z-tooltip: 10;
   --z-fixed: 100;
 }
@@ -118,7 +118,7 @@ começa o meu codigo
 body {
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
-    color: var(--secondary-color)
+    color: var(--secondary-body-color)
 
 
 }
@@ -169,7 +169,7 @@ ul{
   list-style: none;
 }
 
-a{
+a, #headerLogo a:hover {
   text-decoration: none;
   color: var(--background-color)
 }
@@ -217,4 +217,55 @@ a:hover, a:active, a.active {
   max-width:1680px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.nav__burger, 
+.nav__close {
+  color: var(--background-color);
+}
+
+.navAction {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#headerLogo {
+  display: inline-flex;
+  align-items: center;
+  font-size: .25rem;
+}
+
+
+#headerLogo a{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#headerLogo img {
+  width: 3.5rem;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger, 
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close {
+  opacity: 0;
 }
