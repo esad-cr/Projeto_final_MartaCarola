@@ -81,20 +81,54 @@ iframe, video {
 }
 
 /*************************************************
-
 começa o meu codigo
-
-
 **************************************************/
 
+:root{
+  --header-height: 3.5rem;
+
+  --background-color: rgb(13, 13, 13);
+  --primary-color: rgb(255, 110, 180);
+  --secondary-color: rgb(255, 159, 69);
+  --body-color: rgb(255, 255, 255);
+  --secondary-body-color: rgb(204, 204, 204);
+
+  /******* Font weight *********************/
+  --font-regulr: 400;
+  --font-semi-bold: 600;
+  --font-bold: 800;
+
+  /
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/*utilizar classes, exisye mais duas formas de fazer*/
+
+.pageWidth {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: o 16px;
+}
+
+
+/*************************************************
+                   Tipografia
+**************************************************/
 body {
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
+    color: var(--secondary-color)
+
+
 }
-/*** tipogtafia para mobile*************/
+/*********************************************************
+***********************************************************
+******        Tipografia para mobile    *****************
+*************************************************/
 
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family: "Playfair Display", serif;
 }
 
@@ -119,7 +153,30 @@ h3 {
     line-height: 1.15; 
 }
 
+p {
+  font-size: 16px;
+}
 
+small {
+  font-size: 13.33px;
+}
+
+strong{ 
+  font-weight: var(--font-bold);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--background-color)
+}
+
+a:hover, a:active, a.active {
+  color: var(--secondary-color)
+}
 /*********************************************************
 ***********************************************************
 ******        Tipografia para descktop    *****************
@@ -138,4 +195,26 @@ h3 {
     h3{
         font-size: 3,157rem;
     }
+}
+
+
+
+/********** menu de navegção*************************/
+#topHeader {
+  position: fixed; /*menu fixo no scroll*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: var(--z-fixed);
+}
+
+#mainMenu {
+  height: var(--header-height);
+  width: 100%;
+  max-width:1680px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
