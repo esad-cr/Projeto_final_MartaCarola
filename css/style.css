@@ -116,7 +116,7 @@ começa o meu codigo
                    Tipografia
 **************************************************/
 body {
-    font-size: 16px;
+    font-size: 20px;
     font-family: "DM Sans", sans-serif;
     color: var(--secondary-body-color);
     background-color: var(--background-color)
@@ -172,7 +172,7 @@ ul{
 
 a, #headerLogo a:hover {
   text-decoration: none;
-  color: var(--background-color)
+  color: var(--primary-color)
 }
 
 a:hover, a:active, a.active {
@@ -207,8 +207,8 @@ a:hover, a:active, a.active {
   left: 0;
   width: 100%;
   max-width: 100%;
-  background-color: var(--primary-color);
-  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  background-color: var(--background-color);
+  box-shadow: 0 2px 16px hsla(323, 100%, 86%, 0.3);
   z-index: var(--z-fixed);
 }
 
@@ -222,7 +222,7 @@ a:hover, a:active, a.active {
 
 .nav__burger, 
 .nav__close {
-  color: var(--background-color);
+  color: var(--primary-color);
 }
 
 .navAction {
@@ -246,7 +246,7 @@ a:hover, a:active, a.active {
 }
 
 #headerLogo img {
-  width: 4rem;
+  width: 12rem;
 }
 
 .nav__toggle {
@@ -303,6 +303,23 @@ a:hover, a:active, a.active {
   transition: background-color .3s;
   } 
 
+  
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
 
 /* Navigation for large devices */
 
@@ -330,12 +347,12 @@ a:hover, a:active, a.active {
     justify-content: initial;
     column-gap: .25rem;
     background-color: transparent;
-    color: var(--background-color);
+    color: var(--primary-color);
   }
-.nav__link:hover {
-  background-color: transparent;
-  color: var(--body-color);
-}
+  .nav__link:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+  }
 
 }
 
