@@ -85,7 +85,7 @@ começa o meu codigo
 **************************************************/
 
 :root{
-  --header-height: 4.5rem;
+  --header-height: 5.5rem;
 
   --background-color: rgb(13, 13, 13);
   --primary-color: rgb(255, 110, 180);
@@ -282,14 +282,13 @@ a:hover, a:active, a.active {
     overflow: auto;
     pointer-events: none;
     opacity: 0;
-    transition: top .4s, opacity .3s;
+    transition: height .4s, opacity .3s;
   }
-
+}
   .nav__menu::-webkit-scrollbar {
     width: 0;
   }
   .nav__list {
-    background-color: var(--background-color);
     padding-top: 1rem;
   }
 
@@ -302,4 +301,42 @@ a:hover, a:active, a.active {
   justify-content: space-between;
   align-items: center;
   transition: background-color .3s;
+  } 
+
+
+/* Navigation for large devices */
+
+@media screen and (min-width: 992px) {
+  #topHeader {
+    margin-inline: auto;
+  }
+
+    #mainMenu {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+    background-color: transparent;
+    color: var(--background-color);
+  }
+.nav__link:hover {
+  background-color: transparent;
+  color: var(--body-color);
 }
+
+}
+
+
