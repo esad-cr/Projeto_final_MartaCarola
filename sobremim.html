@@ -1,0 +1,79 @@
+<!-- Indica ao navegador que este é um documento HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raiz do documento. O atributo lang="pt-PT" informa que o conteúdo está em português.-->
+<html lang="pt-PT">
+    <head>
+        <!-- Contém informações sobre o documento (meta-informações, título, links para CSS e scripts). -->
+        <meta charset="UTF-8"><!-- Define a codificação para caracteres (acentuação correta) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Torna o site responsivo em dispositivos móveis -->
+        <title>Projeto Final</title>
+        <meta name="author" content="Marta Carola"/><!-- Define o autor do site -->
+        <meta name="description" content="Portfólio" /><!-- Descrição da página (ajuda no SEO) -->
+        <meta name="keywords" content="ESAD.CR, Licenciatura de Mulimédia, Projecto Final" /><!-- Palavras-chave da página (ajuda no SEO) -->
+        <!-- Metadata para chamar o favicon -->
+        <link rel="icon" type="image/x-icon" href="img/icon/favicon.jpg">
+        <!-- Integração da CSS -->
+        <!-- fontes antes que a css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+        <!--=======================remixicon==========================================================-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Contém tudo o que será exibido na página: textos, imagens, links, etc. -->
+        <header id="topHeader" class="pageWidth">
+        <!-- Representa o cabeçalho da página ou de uma seção. Contém títulos, logotipo, menus, etc.-->
+             <nav id="mainMenu">
+                 <div class="navAction"> 
+                    <div id="headerLogo">
+                        <a href="index.html" title="Projeto Final - Index" rel="noopener noreferrer"><img src="img/icon/logo-05.svg"><strong></strong></a>
+                    </div> 
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-4-fill nav__burger"></i>
+                        <i class="ri-close-large-line nav__close"></i>
+                    </div>        
+                </div>
+            <!-- Define uma área de navegação, com links internos ou externos. -->
+                 <div class="nav__menu" id="navMenu">
+
+                    <ul class="nav__list">
+                        <li>
+                            <a class="nav__link" href="index.html" title="Página principal" rel="noopener noreferrer">HOME</a>
+                        </li>
+                        <li>
+                            <a  class="nav__link active" href="sobre-mim.html" title="Sobre mim" rel="noopener noreferrer">Sobre mim</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="projetos.html" title="Os meus projetos" rel="noopener noreferrer">Projetos</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="processing.html" title="Processing" rel="noopener noreferrer">Processing</a>
+                        </li>
+                        <li>
+                            <a class="nav__link" href="contactos.html" title="Contactos" rel="noopener noreferrer">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="mainContent" class="pageWidth">
+        <!-- O conteúdo principal da página, exclusivo e central. Deve haver apenas um <main> por página. -->
+            <h1>Página Sobre Mim</h1>
+            <h2>Artigo Principal</h2>
+            <h3>ver o h3</h3>
+        </main>
+        <footer id="mainFooter" class="pageWidth">
+            <!-- Define o rodapé da página ou de uma secção. Contém informações como: Direitos de autor, contatos, links úteis e créditos -->
+            <p>&copy; - Todos os direitos reservado a Marta Carola <b>|</b> 2026 Projeto Final</p>
+        </footer>
+        <!-- Os ficheiro de script ficam no final da página -->
+        <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js" integrity="sha512-lbO95HE52QWwrDVEaDJmW9Xr8UIfMpRFT3akB8ett7lGfWsrGKz07L6wfwnF3KJ3T4a8cZupAKoI9Q2jH+0QIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="processing/script.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>

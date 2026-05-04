@@ -116,7 +116,7 @@ começa o meu codigo
                    Tipografia
 **************************************************/
 body {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "DM Sans", sans-serif;
     color: var(--secondary-body-color);
     background-color: var(--background-color)
@@ -137,14 +137,14 @@ h1{
     font-size: 2.986rem;
     font-weight: 900;
     letter-spacing: 0.22rem;
-    line-height: 1.5;
+    line-height: 3.5;
 }
 
 h2 {
     font-size: 2.488rem;
     font-weight: 700;
     letter-spacing: 0.22rem;
-    line-height: 1.15;
+    line-height: 2;
 }
 
 h3 {
@@ -172,12 +172,32 @@ ul{
 
 a, #headerLogo a:hover {
   text-decoration: none;
-  color: var(--primary-color)
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 a:hover, a:active, a.active {
   color: var(--secondary-color)
 }
+
+.space-S{
+  height: 30px;
+}
+
+.space-M{
+  height: 60px;
+}
+
+.space-L{
+  height: 90px;
+}
+
+.space-XL{
+  height: 120px;
+}
+
+
 /*********************************************************
 ***********************************************************
 ******        Tipografia para descktop    *****************
@@ -356,4 +376,17 @@ a:hover, a:active, a.active {
 
 }
 
+/****************************************
+************* mainContent ***************
+****************************************/
+
+#mainContent {
+  margin-top:var(--header-height)!important;
+}
+
+@media screen and (min-width: 992px) {
+  #mainContent {
+    margin-top: calc(var(--header-height)+2rem)
+  }
+}
 
