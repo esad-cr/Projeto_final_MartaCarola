@@ -92,6 +92,7 @@ começa o meu codigo
   --secondary-color: rgb(255, 159, 69);
   --body-color: rgb(255, 255, 255);
   --secondary-body-color: rgb(204, 204, 204);
+  --third-color: rgb(76, 223, 174);
 
   /******* Font weight *********************/
   --font-regulr: 400;
@@ -100,7 +101,7 @@ começa o meu codigo
 
   
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 100; 
 }
 /*utilizar classes, exisye mais duas formas de fazer*/
 
@@ -130,26 +131,26 @@ body {
 
 
 h1, h2, h3 {
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat Alternates", sans-serif;
 }
 
 h1{
-    font-size: 2.986rem;
-    font-weight: 900;
+    font-size: 2.027rem;
+    font-weight: 700;
     letter-spacing: 0.22rem;
     line-height: 3.5;
 }
 
 h2 {
-    font-size: 2.488rem;
-    font-weight: 700;
+    font-size: 1.802rem;
+    font-weight: 500;
     letter-spacing: 0.22rem;
     line-height: 2;
 }
 
 h3 {
-    font-size: 2.074rem;
-    font-weight: 500;
+    font-size: 1.602rem;
+    font-weight: 400;
     letter-spacing: 0.22rem;
     line-height: 1.15; 
 }
@@ -206,19 +207,30 @@ a:hover, a:active, a.active {
 @media (min-width: 992px) {
 
     h1{
-        font-size: 5,61rem;
+        font-size: 3.815rem;
     }
     
     h2{
-        font-size: 4,209rem;
+        font-size: 3.052rem;
     }
 
     h3{
-        font-size: 3,157rem;
+        font-size: 2.441rem;
     }
 }
 
+/***************** utilidades***********************/
+.text_center{
+  text-align: center;
+}
 
+.white_text{
+  color:var(--background-color);
+}
+
+.invert_filter{
+  filter: invert(1);
+}
 
 /********** menu de navegção*************************/
 #topHeader {
@@ -389,4 +401,7 @@ a:hover, a:active, a.active {
     margin-top: calc(var(--header-height)+2rem)
   }
 }
+
+
+
 
