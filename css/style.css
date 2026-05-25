@@ -136,23 +136,23 @@ h1, h2, h3 {
 
 h1{
     font-size: 2.027rem;
-    font-weight: 700;
+    font-weight: 700rem;
     letter-spacing: 0.22rem;
     line-height: 3.5;
 }
 
 h2 {
-    font-size: 1.802rem;
-    font-weight: 500;
+    font-size: 1.rem;
+    font-weight: 500rem;
     letter-spacing: 0.22rem;
     line-height: 2;
 }
 
 h3 {
-    font-size: 1.602rem;
-    font-weight: 400;
+    font-size: 0.7rem;
+    font-weight: 400rem;
     letter-spacing: 0.22rem;
-    line-height: 1.15; 
+    line-height: 1.15rem; 
 }
 
 p {
@@ -207,16 +207,29 @@ a:hover, a:active, a.active {
 @media (min-width: 992px) {
 
     h1{
-        font-size: 3.815rem;
+        font-size: 4.815rem;
     }
     
     h2{
-        font-size: 3.052rem;
+        font-size: 2.052rem;
     }
 
     h3{
-        font-size: 2.441rem;
+        font-size: 1.2rem;
     }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      strong{ 
+          font-weight: var(--font-bold);
+      }
+     
+      small {
+            font-size: 1rem;
+      }
 }
 
 /***************** utilidades***********************/
@@ -398,10 +411,267 @@ a:hover, a:active, a.active {
 
 @media screen and (min-width: 992px) {
   #mainContent {
-    margin-top: calc(var(--header-height)+2rem)
+    margin-top: calc(var(--header-height)+4.5rem)
   }
 }
 
+ 
+    /* ==========================================
+       SECÇÃO TÍTULO
+       ========================================== */
+    .titulo_1 {
+      margin: 10.5rem 0rem 6rem 0rem;
+      position: relative;
+    }
+ 
+ 
+    /* Título principal da página */
+    .titulo_1 h1 {
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--body-color);
+    }
+ 
+    .titulo_1 h1 em {
+      font-style: normal;
+      color: var(--primary-color);
+    }
+ 
+  
+ 
+    /* ==========================================
+       SECÇÃO SOBRE MIM
+       ========================================== */
+    .sobre-mim {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 5rem;
+      align-items: start;
+    }
+ 
+    /* --- FOTOGRAFIA --- */
+    .sobremim_foto {
+      position: sticky;
+      top: 6rem;
+      
+      
+    }
 
+    .foto-frame img {
+      width: 70%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      justify-self: center;
+      display: block;
+      
+      
+    }
+ 
+ 
+    /* Legenda da fotografia */
+    .foto-legenda {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      justify-self: center;
+    }
+ 
+    /* Nome em destaque na legenda */
+    .foto-legenda h2 {
+      display: block;
+      letter-spacing: 0.05em;
+      color: var(--body-color);
+    }
+ 
+    /* legenda */
+    .foto-legenda h3 {
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+      margin-top: 0.5rem;
+    }
+ 
 
+ @media screen and (max-width: 992px) {
 
+  .titulo_1 {
+    padding: 0px 50px;
+  }
+
+  .sobre-mim{
+    padding: 30px;
+    grid-template-columns: 12fr;
+    
+  }
+ .sobremim_foto{ 
+  width: 80%;
+  position: initial;
+  align-self: center;
+  justify-self: center;
+  
+ }
+
+ .educacao {
+  padding: 30px;
+
+ }
+ }
+
+    /* --- BIO --- */
+    .about-me {
+      padding-top: 0.5rem;
+    }
+ 
+    /* Subtítulo da bio */
+    .about-me h2 {
+      text-align: center;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      color: var(--body-color);
+      margin-bottom: 5rem;
+    }
+ 
+    /* Palavra em destaque */
+    .about-me h2 span {
+      color: var(--primary-color);
+    }
+ 
+    /* Parágrafos da bio */
+    .about-me p {
+      color: var(--secondary-body-color);
+      margin-bottom: 1.1rem;
+    }
+
+    .ferramentas {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 3px solid rgba(255, 62, 181, 0.267);
+    }
+ 
+    /* Título da secção de ferramentas */
+    .ferramentas h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+    }
+ 
+    /* Lista de ferramentas — grelha com elementos li */
+    .ferramentas ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 0.8rem;
+      list-style: none;
+    }
+ 
+    /* Cada item da lista de ferramentas */
+    .ferramentas ul li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      background: rgba(85, 85, 85, 0.363);
+      border: 1px solid var(--primary-color);
+    }
+
+    /* Sigla da ferramenta */
+    .ferramentas ul li strong {
+      letter-spacing: 0.05em;
+      color: var(--primary-color);
+      line-height: 1;
+    }
+
+    /* ==========================================
+       SECÇÃO ÁREAS DE TRABALHO — usa <ul> semântico
+       ========================================== */
+    .areas {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top:  3px solid rgba(255, 62, 181, 0.267);
+    }
+ 
+    .areas h2 {
+      text-align: center;
+      letter-spacing: 0.08em;
+      color: var(--secondary-color);
+      margin-bottom: 1.3rem;
+    }
+ 
+    /* Lista de áreas */
+    .areas ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+ 
+    .areas ul li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: rgba(232,224,216,0.65);
+      padding: 0.6rem 0;
+    }
+ 
+    /* Marcador laranja circular antes de cada item */
+    .areas ul li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--secondary-color);
+    }
+    
+/* ==========================================
+       SECÇÃO EDUCAÇÃO
+  ========================================== */
+    .educacao {
+      margin-top: 5rem;
+      padding-top: 4rem;
+      border-top: 3px solid rgba(255, 62, 181, 0.267);
+    }
+ 
+    .educacao h2 {
+      letter-spacing: 0.03em;
+      margin-bottom: 2.5rem;
+      color: var(--body-color);
+    }
+ 
+    .educacao h2 span { 
+      color: var(--primary-color); }
+ 
+    
+    .educacao article {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+ 
+    /* Ano letivo */
+    .educacao article small.ano {
+      text-transform: uppercase;
+      color: var(--primary-color);
+      padding-top: 0.2rem;
+    }
+ 
+    /* Nome do curso */
+    .educacao article h3 {
+      letter-spacing: 0.05em;
+      color: var(--primary-color);
+      margin-bottom: 0.3rem;
+    }
+ 
+    /* Nome da escola */
+    .educacao article p.escola {
+      color: var(--secondary-body-color);
+      letter-spacing: 0.04em;
+    }
+
+     
+
+    /* ==========================================
+       footer
+       ========================================== */
+  
