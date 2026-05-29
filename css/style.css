@@ -92,7 +92,7 @@ começa o meu codigo
   --secondary-color: rgb(255, 159, 69);
   --body-color: rgb(255, 255, 255);
   --secondary-body-color: rgb(204, 204, 204);
-  --third-color: rgb(76, 223, 174);
+  --card-bg-color: rgba(85, 85, 85, 0.363);
 
   /******* Font weight *********************/
   --font-regulr: 400;
@@ -110,6 +110,7 @@ começa o meu codigo
   max-width: 1680px;
   margin: 0 auto;
   padding: o 16px;
+
 }
 
 
@@ -120,7 +121,8 @@ body {
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
     color: var(--secondary-body-color);
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    padding-bottom: 2rem;
 
 
 }
@@ -157,6 +159,7 @@ h3 {
 
 p {
   font-size: 16px;
+  line-height: 1.5rem;
 }
 
 small {
@@ -433,7 +436,6 @@ a:hover, a:active, a.active {
     }
  
     .titulo_1 h1 em {
-      font-style: normal;
       color: var(--primary-color);
     }
  
@@ -492,31 +494,6 @@ a:hover, a:active, a.active {
     }
  
 
- @media screen and (max-width: 992px) {
-
-  .titulo_1 {
-    padding: 0px 50px;
-  }
-
-  .sobre-mim{
-    padding: 30px;
-    grid-template-columns: 12fr;
-    
-  }
- .sobremim_foto{ 
-  width: 80%;
-  position: initial;
-  align-self: center;
-  justify-self: center;
-  
- }
-
- .educacao {
-  padding: 30px;
-
- }
- }
-
     /* --- BIO --- */
     .about-me {
       padding-top: 0.5rem;
@@ -549,12 +526,12 @@ a:hover, a:active, a.active {
     }
  
     /* Título da secção de ferramentas */
-    .ferramentas h3 {
+    .ferramentas h2 {
       color: var(--secondary-color);
-      margin-bottom: 1.5rem;
+      margin-bottom: 3rem;
     }
  
-    /* Lista de ferramentas — grelha com elementos li */
+    /* Lista de ferramentas */
     .ferramentas ul {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -562,7 +539,7 @@ a:hover, a:active, a.active {
       list-style: none;
     }
  
-    /* Cada item da lista de ferramentas */
+    /*lista de ferramentas */
     .ferramentas ul li {
       display: flex;
       flex-direction: column;
@@ -575,12 +552,12 @@ a:hover, a:active, a.active {
     /* Sigla da ferramenta */
     .ferramentas ul li strong {
       letter-spacing: 0.05em;
-      color: var(--primary-color);
+      color: var(--secondary-color);
       line-height: 1;
     }
 
     /* ==========================================
-       SECÇÃO ÁREAS DE TRABALHO — usa <ul> semântico
+       SECÇÃO ÁREAS DE TRABALHO
        ========================================== */
     .areas {
       margin-top: 3rem;
@@ -592,7 +569,7 @@ a:hover, a:active, a.active {
       text-align: center;
       letter-spacing: 0.08em;
       color: var(--secondary-color);
-      margin-bottom: 1.3rem;
+      margin-bottom: 2rem;
     }
  
     /* Lista de áreas */
@@ -645,8 +622,7 @@ a:hover, a:active, a.active {
       display: grid;
       grid-template-columns: 140px 1fr;
       gap: 2rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+      padding-bottom: 30px;
     }
  
     /* Ano letivo */
@@ -669,9 +645,216 @@ a:hover, a:active, a.active {
       letter-spacing: 0.04em;
     }
 
-     
+    /* ------------------mobile sobre mim ---------------------------*/
+
+    @media screen and (max-width: 992px) {
+
+      .titulo_1 {
+        padding: 0px 50px;
+      }
+
+      .sobre-mim{
+        padding: 30px;
+        grid-template-columns: 12fr;
+        
+      }
+    .sobremim_foto{ 
+      width: 80%;
+      position: initial;
+      align-self: center;
+      justify-self: center;
+      
+    }
+
+    .educacao {
+      padding: 30px;
+
+    }
+    }
+
+
+    /* ==========================================
+       CONTACTOS
+       ========================================== */
+    
+
+    .Titulo-Contactos h1 {
+      color: var(--body-color);
+      line-height: 3;
+    }
+ 
+    .Titulo-Contactos h1 em {
+      color: var(--primary-color);
+    }
+ 
+    p.descricao {
+      margin-top: -3rem;
+      color: var(--primary-color);
+      max-width: 750px;
+      border-bottom: 1px solid var(--primary-color);
+      padding-bottom: 1rem;
+    }
+
+
+
+/* ==========================================
+       BLOCO DE CONTACTOS — EMAIL + REDES
+       ========================================== */
+    
+    .contactos {
+      display: flex;
+      gap: 9rem;
+      margin-top: 4rem;
+      }
+
+    .contact-email {
+      width: 55%;
+    }
+
+    .contact-social {
+      width: 40%;
+    }
+    
+    /* --- COLUNA ESQUERDA — EMAIL --- */
+    .contact-email h2 {
+      color: var(--secondary-color);
+    }
+ 
+    .contact-email .email-descricao {
+      color: var(--secondary-body-color);
+      margin-bottom: 2.5rem;
+      max-width: 750px;
+    }
+ 
+ 
+    /* Link de email */
+    .email-link {
+      color: var(--secondary-color);
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--secondary-color);
+    }
+ 
+    .email-link:hover {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+ 
+    /* --- COLUNA DIREITA — REDES SOCIAIS --- */
+    .redes-socias h2 {
+      color: var(--secondary-color);
+    }
+ 
+    .redes-socias .social-descricao {
+      color: var(--secondary-body-color);
+      margin-bottom: 3rem;
+      max-width: 700px;
+    }
+ 
+    /* Lista de redes sociais */
+    .social-lista {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-bottom: 30px;
+    }
+ 
+    /* Cartão de rede social */
+    .social-lista li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 1.6rem;
+      background: var(--card-bg-color);
+      border: 1px solid var(--primary-color);
+    }
+ 
+    .social-lista li a:hover {
+      border-color: rgba(255,62,181,0.4);
+      background: rgba(255,62,181,0.04);
+      transform: translateX(8px);
+    }
+ 
+    .social-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-info i {
+      font-size: 1.5rem; 
+      color: var(--primary-color);
+    }
+ 
+    h3.social-user  {
+      color: var(--secondary-body-color);
+    }
+ 
+    /* Seta hover */
+    .social-arrow {
+      color: var(--primary-color);
+      transform: translateX(-4px);
+    }
+ 
+    .social-list li a:hover .social-arrow {
+      transform: translateX(0);
+    }
+ 
+/* ------------------mobile contactos ---------------------------*/
+
+    @media screen and (max-width: 992px) {
+
+    .contactos {
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 4rem;
+    padding: 0 30px;
+  }
+
+  p.descricao {
+      margin-top: 0rem;
+    }
+
+  .contact-email,
+  .redes-socias {
+    width: 100%;
+  }
+
+  .redes-socias {
+    border-top: 1px solid var(--primary-color);
+    padding-top: 2rem;
+  }
+  
+  .Titulo-Contactos {
+    padding: 0 30px; 
+  }
+  
+}
 
     /* ==========================================
        footer
        ========================================== */
-  
+  #mainFooter {
+  position: static;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--primary-color);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--z-fixed);
+}
+
+#mainFooter img {
+  height: 2rem;
+  width: auto;
+}
+
+#mainFooter small {
+  color: var(--secondary-body-color);
+}
