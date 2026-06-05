@@ -1011,6 +1011,256 @@ a:hover, a:active, a.active {
     white-space: nowrap;
   }
 }
+/*=============== LEVIS============*/
+
+.projeto-secao {
+        padding: 3rem 0;
+        min-height: 50vh;
+        border-top: 3px solid rgba(255, 110, 180, 0.2);
+        scroll-margin-top: calc(var(--header-height) + 1rem);
+      }
+
+      .projeto-numero {
+        color: rgba(255, 110, 180, 0.144);
+        line-height: 1;
+        margin-bottom: 2rem;
+        user-select: none;
+      }
+ 
+      .projeto-categoria {
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+ 
+      .projeto-secao h2 {
+        color: var(--body-color);
+        margin-bottom: 0.5rem;
+      }
+ 
+      .projeto-secao h2 small { color: var(--primary-color); }
+ 
+      .projeto-keywords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0 2.5rem;
+        list-style: none;
+      }
+ 
+      .projeto-keywords li {
+        text-transform: uppercase;
+        color: var(--background-color);
+        background: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+      }
+
+      .projeto-introducao {
+        color: var(--secondary-body-color);      
+        margin: 2rem 0 4rem 0; 
+      }
+
+      /****************************************
+************* cards ***************
+****************************************/
+/*---- Definir o flex/autolayout ----*/
+.container {
+  --gap: 0;
+  padding: 2rem;
+  
+}
+.flex {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  gap: var(--gap, 1em);
+}
+
+.border_radius {
+  border-radius: 15px;
+}
+.flex-column {
+  flex-direction: column;
+  width:50%;
+  margin-left: 0;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
+/*---- Definir as background-colors ----*/
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+.bg-secondary-color {
+  background-color: var(--secondary-color)
+}
+
+/*---- articles - estilo do card ----*/
+.container article:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.container article:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.container article {
+  --gap: 2em;
+  line-height: 1.5;
+  padding: 3em;
+}
+
+.card-header {
+  display: flex;
+  align-items: center; 
+  gap: 10px;           
+  margin-bottom: 5px;  
+}
+
+.card-header i {
+  color: var(--background-color);      
+  font-size: 1.4rem;   
+}
+
+.card-header h3 {
+  font-weight: bold; 
+}
+
+.nome-artista {
+  text-transform: uppercase;         
+}
+
+
+@media screen and (max-width: 992px) {
+  .container .flex{
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 90%;
+  }
+  .container article {
+    width:100%;
+  }
+  .container article:first-child {
+    border-radius: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .container article:last-child {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
+
+
+
+
+      /* ==========================================
+         ANTES & DEPOIS 
+         ========================================== */
+         
+      .antes-depois-titulo {
+        color: var(--secondary-color);
+        margin-bottom: 1.5rem;
+      }
+ 
+      /* Grelha de pares antes/depois */
+      .antes-depois-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+ 
+      /* Cada par de imagens */
+      .foto-par {
+        position: relative;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        cursor: pointer;
+      }
+ 
+      /* Imagem ANTES — visível por defeito */
+      .foto-antes,
+      .foto-depois {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.5s ease;
+      }
+ 
+ 
+      
+      
+      /*  hover  */
+        .foto-antes {
+          opacity: 1;
+          z-index: 3;
+        }
+
+        
+        .foto-depois {
+          opacity: 0;
+          z-index: 2;
+        }
+
+        
+        .foto-par:hover .foto-antes { 
+          opacity: 0;
+          z-index: 1;            
+          pointer-events: none;  
+        }
+
+        .foto-par:hover .foto-depois { 
+          opacity: 1; 
+          z-index: 4;            
+        }
+ 
+      /* Badge "Antes" / "Depois" */
+      .foto-par::before {
+        content: 'Antes';
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--background-color);
+        background: var(--primary-color);
+        padding: 0.2rem 0.6rem;
+        z-index: 5;
+        transition: opacity 0.3s;
+      }
+ 
+      .foto-par::after {
+        content: 'Depois';
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--background-color);
+        background: var(--secondary-color);
+        padding: 0.2rem 0.6rem;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+ 
+      .foto-par:hover::before { opacity: 0; }
+      .foto-par:hover::after  { opacity: 1; }
+ 
+ 
+      
+
+
 
     /* ==========================================
        footer
