@@ -821,6 +821,9 @@ a:hover, a:active, a.active {
   .redes-socias {
     width: 100%;
   }
+  .contact-email {
+    height: 200px;
+  }
 
   .redes-socias {
     border-top: 1px solid var(--primary-color);
@@ -1092,10 +1095,12 @@ a:hover, a:active, a.active {
 
 /*---- Definir as background-colors ----*/
 .bg-primary-color {
-  background-color: var(--primary-color);
+  border: 1px solid rgba(255,62,181,0.4);
+  background: rgba(255,62,181,0.04);
 }
 .bg-secondary-color {
-  background-color: var(--secondary-color)
+  background: var(--card-bg-color);
+  border: 1px solid rgba(255,62,181,0.4);
 }
 
 /*---- articles - estilo do card ----*/
@@ -1112,8 +1117,7 @@ a:hover, a:active, a.active {
   line-height: 1.5;
   padding: 3em;
 }
-
-.card-header {
+.card-header2,.card-header {
   display: flex;
   align-items: center; 
   gap: 10px;           
@@ -1121,10 +1125,23 @@ a:hover, a:active, a.active {
 }
 
 .card-header i {
-  color: var(--background-color);      
+  color: var(--primary-color);      
   font-size: 1.4rem;   
 }
 
+.card-header2 i {
+  color: var(--secondary-color);      
+  font-size: 1.4rem;   
+}
+
+.white_text2{
+  color: var(--secondary-color)
+}
+
+.white_text{
+   color: var(--primary-color);
+
+}
 .card-header h3 {
   font-weight: bold; 
 }
@@ -1162,7 +1179,7 @@ a:hover, a:active, a.active {
          ANTES & DEPOIS 
          ========================================== */
          
-      .antes-depois-titulo {
+      h2.antes-depois-titulo {
         color: var(--secondary-color);
         margin-bottom: 1.5rem;
       }
@@ -1183,7 +1200,7 @@ a:hover, a:active, a.active {
         cursor: pointer;
       }
  
-      /* Imagem ANTES — visível por defeito */
+      /* Imagem ANTES  */
       .foto-antes,
       .foto-depois {
         position: absolute;
@@ -1194,9 +1211,6 @@ a:hover, a:active, a.active {
         display: block;
         transition: opacity 0.5s ease;
       }
- 
- 
-      
       
       /*  hover  */
         .foto-antes {
@@ -1222,7 +1236,7 @@ a:hover, a:active, a.active {
           z-index: 4;            
         }
  
-      /* Badge "Antes" / "Depois" */
+      /* "Antes" / "Depois" */
       .foto-par::before {
         content: 'Antes';
         position: absolute;
@@ -1257,8 +1271,80 @@ a:hover, a:active, a.active {
       .foto-par:hover::before { opacity: 0; }
       .foto-par:hover::after  { opacity: 1; }
  
- 
+  /* ==========================================
+     capturacao
+       ========================================== */
+      h2.fotos-titulo {
+        color: var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        padding-top: 4rem;
+        margin-top: 7rem;
+      }
       
+       .fotos-selecao {
+        columns: 3;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .fotos-selecao img {
+        width: 100%;
+        margin-bottom: 1rem;
+        display: block;
+      }
+/* ==========================================
+    mockups
+       ========================================== */
+
+
+       h2.mockups-titulo{
+         color: var(--secondary-color);
+        border-top: 1px solid var(--secondary-color);
+        padding-top: 4rem;
+        margin-top: 7rem;
+       }
+
+
+      .mockups-grid {
+        columns: 3;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .mockups-grid img {
+        width: 100%;
+        margin-bottom: 1rem;
+        display: block;
+        break-inside: avoid;
+      }
+
+/* ==========================================
+   Mobile
+       ========================================== */
+
+
+      @media screen and (max-width: 992px) {
+
+      /* Secção do projeto */
+      .projeto-secao {
+        padding: 2rem 30px;
+      }
+
+      /* Antes & depois — 2 colunas */
+      .antes-depois-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* Captações — 2 colunas */
+      .fotos-selecao {
+        columns: 2;
+      }
+
+      /* Mockups — 2 colunas */
+      .mockups-grid {
+        columns: 2;
+      }
+    }
 
 
 
