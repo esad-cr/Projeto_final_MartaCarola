@@ -418,6 +418,99 @@ a:hover, a:active, a.active {
   }
 }
 
+
+
+
+
+/* ==========================================
+-----------------------------------------------------
+-----------------------------------------------------
+       Pagina index
+--------------------------------------------------- */
+
+ /* ==========================================
+       SECÇÃO Thero img
+       ========================================== */
+
+.hero {
+    height: 90vh;
+    background-image: url('../img/index/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:bottom center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.hero-heading {
+    width: 70%;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 172px;
+    color: var(--primary-color);
+    font-weight: var(--font-bold);
+}
+
+.hero-description {
+    margin-top: 208px;
+    color: var(--background-color);
+}
+
+.button-large {
+    color: var(--background-color);
+    background-color: var(--card-bg-color);
+    border-color: var(--primary-color);
+    padding: 20px 75px;
+    border-radius: 3rem;
+    margin-top: 25px;
+}
+
+.button-large:hover {
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+  border: var(--secondary-color);
+  cursor: pointer;
+}
+
+
+
+/* ==========================================
+       mobile index
+       ========================================== */
+
+@media screen and (max-width: 992px) {
+  .hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  h1.hero-heading {
+    width: 100%;
+    line-height: 1.2;
+    margin-top: -215px;
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .button-large {
+    padding: 15px 40px;
+  }
+}
+/* ==========================================
+-----------------------------------------------------
+-----------------------------------------------------
+       Pagina sobre mim
+--------------------------------------------------- */
+
+
  
     /* ==========================================
        SECÇÃO TÍTULO
@@ -673,8 +766,12 @@ a:hover, a:active, a.active {
     }
 
 
+
+
+
+
     /* ==========================================
-       CONTACTOS
+       pagina CONTACTOS
        ========================================== */
     
 
@@ -838,8 +935,11 @@ a:hover, a:active, a.active {
 
 
 
+
+
+
 /****************************************
-************* projetos ***************
+************* pagina projetos ***************
 ****************************************/
 
 #mainContent {
