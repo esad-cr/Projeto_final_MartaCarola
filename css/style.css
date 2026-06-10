@@ -1885,12 +1885,50 @@ a.button-large {
        pagina processing
    ==========================================
    ========================================== */
-   #pjCanvas {
-    width: 100%;
-    height: auto;
-    align-items: center;
-   }
+   .processing-hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+}
 
+.processing-texto {
+  width: 50%;
+}
+
+.processing-texto p {
+  color: var(--secondary-body-color);
+  margin-bottom: 1rem;
+}
+
+.processing-relogio {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-processing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.8rem 1.5rem;
+}
+
+
+@media screen and (max-width: 992px) {
+  .processing-hero {
+    flex-direction: column;
+    padding: 2rem 30px;
+  }
+
+  .processing-texto,
+  .processing-relogio {
+    width: 100%;
+  }
+}
 
 
 
