@@ -436,7 +436,7 @@ a:hover, a:active, a.active {
     height: 90vh;
     background-image: url('../img/index/fundo.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position:bottom center; 
     display: flex;
     flex-direction: column;
@@ -1341,48 +1341,32 @@ a.button-large {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For medium devices <> */
-@media (width >= 540px) {
-  .card {
-    align-items: center;
+
+@media screen and (max-width: 992px) {
+
+  /* cards em coluna */
+  .card-expand {
+    flex-direction: column !important;
+    height: auto;
   }
+
   .card__article {
-    width: 400px;
-    justify-self: center;
+    width: 100% !important;
+    min-height: 200px;
+    flex: none !important;
+  }
+
+  .card__active {
+    flex: none !important;
+    min-height: 300px;
+  }
+
+  .card__data {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 
-/* For large devices <> */
-@media screen and (width >= 1150px) {
-  .card-expand {
-    max-width: 1120px;
-    margin-inline: auto;
-    flex-direction: row;
-    column-gap: 1.5rem;
-  }
-  .card__article {
-    flex: 0 0 80px;
-    height: 460px;
-  }
-  .card__active, 
-  .card__article:hover {
-    flex: 5;
-  }
-  .card:has(.card__article:not(.card__active):hover) .card__active {
-    flex: 0 0 80px;
-  }
-  .card__data {
-    left: 1.5rem;
-    bottom: 1.5rem;
-  }
-  .card__title {
-    white-space: nowrap;
-  }
-  .card__description {
-    font-size: var(--normal-font-size);
-    white-space: nowrap;
-  }
-}
 /*=============== LEVIS============*/
 
 .projeto-secao {
@@ -1551,6 +1535,9 @@ a.button-large {
       h2.antes-depois-titulo {
         color: var(--secondary-color);
         margin-bottom: 1.5rem;
+        border-top: 1px solid var(--secondary-color);
+        padding-top: 4rem;
+        margin-top: 7rem;
       }
  
       /* Grelha de pares antes/depois */
@@ -1656,10 +1643,24 @@ a.button-large {
         margin-bottom: 3rem;
       }
 
+      .fotos-selecaon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
       .fotos-selecao img {
         width: 100%;
         margin-bottom: 1rem;
         display: block;
+      }
+
+      .fotos-selecaon img {
+        flex: 1; 
+        width: 100%;
+        height: 750px; 
+        object-fit: cover; 
       }
 /* ==========================================
     mockups
@@ -1676,6 +1677,8 @@ a.button-large {
 
       .mockups-grid {
         columns: 3;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px 250px;
         gap: 1rem;
         margin-bottom: 3rem;
       }
@@ -1687,33 +1690,207 @@ a.button-large {
         break-inside: avoid;
       }
 
+      .mockups-grid a {
+      display: block;
+      }
+
+      .mockups-grid a.story {
+        grid-row: span 2;
+      }
+
+    .mockups-grid a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mockups-grid a.story img {
+      height: 100%;
+    }
+
+    .mockups-grid-escada{
+      columns: 2;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .mockups-grid-escada a img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1rem;
+    }
 /* ==========================================
+    video promocional
+       ========================================== */
+
+      h2.video-promocional{
+         color: var(--primary-color);
+        border-top: 1px solid var(--primary-color);
+        padding-top: 4rem;
+        margin-top: 7rem;
+       }
+
+
+    
+      .video-grid {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5rem;
+      }
+
+      .video-gridn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
+
+
+      a.video-thumb {
+        position: relative;
+        display: inline-block;
+        width: 35%;
+        max-width: 400px;
+      }
+
+      a.video-thumb img {
+        width: 100%;
+        display: block;
+      }
+
+      .video-play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+        color: var(--background-color);
+        opacity: 60%;
+        pointer-events: none;
+      }
+
+      a.video-thumb:hover .video-play-icon {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      /* ==========================================
    Mobile
        ========================================== */
 
 
-      @media screen and (max-width: 992px) {
 
-      /* Secção do projeto */
-      .projeto-secao {
-        padding: 2rem 30px;
-      }
+  @media screen and (max-width: 992px) {
 
-      /* Antes & depois — 2 colunas */
-      .antes-depois-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  /* Secção do projeto */
+  .projeto-secao {
+    padding: 2rem 30px;
+  }
 
-      /* Captações — 2 colunas */
-      .fotos-selecao {
-        columns: 2;
-      }
+  /* Título da página */
+  .titulo-p {
+    padding: 0 30px;
+  }
 
-      /* Mockups — 2 colunas */
-      .mockups-grid {
-        columns: 2;
-      }
-    }
+  /* Container dos cards de info */
+  .container {
+    padding: 0 30px;
+  }
+
+  /* Cards dos projetos — altura mínima */
+  .card__article {
+    min-height: 200px;
+  }
+
+  /* Antes & depois — 2 colunas */
+  .antes-depois-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Captações Levi's e VW — 2 colunas sem espaço extra */
+  .fotos-selecao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    columns: unset;
+    gap: 1rem;
+  }
+
+  .fotos-selecao a {
+    display: block;
+  }
+
+  .fotos-selecao a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+  }
+
+  /* Captações Nespresso — 1 coluna mesma altura */
+  .fotos-selecaon {
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .fotos-selecaon a {
+    width: 100%;
+  }
+
+  .fotos-selecaon img {
+    width: 100%;
+    height: 500px !important;
+    object-fit: cover;
+  }
+
+  /* Mockups Levi's — grid 2 colunas */
+  .mockups-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    columns: unset;
+  }
+
+  .mockups-grid a.story {
+    grid-row: span 2;
+  }
+
+  /* Mockups Escada — 1 coluna */
+  .mockups-grid-escada {
+    columns: 1;
+  }
+
+  /* Vídeo Escada */
+  a.video-thumb {
+    width: 80%;
+    max-width: 100%;
+  }
+
+  /* Vídeos Nespresso — em coluna */
+  .video-gridn {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .video-gridn a.video-thumb {
+    width: 80%;
+  }
+}
+
+
+/* ==========================================
+   ==========================================
+       pagina processing
+   ==========================================
+   ========================================== */
+   #pjCanvas {
+    width: 100%;
+    height: auto;
+    align-items: center;
+   }
+
 
 
 
